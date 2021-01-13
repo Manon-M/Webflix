@@ -329,19 +329,81 @@ marquee{
     padding: 0 20px 0 20px;
 }
 
-.rating {
-    direction: rtl;
- }
-.rating a {
-    color: gray;
-    text-decoration: none;
-    font-size: 1.5em;
-    transition: color .4s;
+#nov{
+    display: flex;
+    justify-content: center;
 }
-.rating a:hover,
-.rating a:focus,
-.rating a:hover ~ a,
-.rating a:focus ~ a {
-    color: orange;
-    cursor: pointer;
+
+.pagination {
+    padding: 35px 0 20px 0;
+    display: inline-block;
+    justify-content: center;
+}
+
+.pagination a {
+    color: #FFFF;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a:hover{
+    color: red;
+    border: 2px solid red;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(181, 200, 216, 0.2)
+}
+
+.cam{
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0 0 20px;
+    width: 20%;
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.utilisation{
+    display: flex;
+    flex-direction: row;
+}
+
+.utilisation p{
+    padding-right: 20px;
+}
+
+.copyright{
+    display: flex;
+}
+
+.conditions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 30px;
+    border-top: 2px solid black;
+    font-weight: bold;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+
+footer a{
+    color: #7f0c08;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color:darkgray;
 }
