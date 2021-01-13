@@ -295,12 +295,16 @@ marquee{
     font-size: 25px;
 }
 
+.card_film{
+    align-self: center;
+}
+
 .ensemble{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-top: 60px;
-    width: 50%;
+    width: 1000px;
 }
 
 .carte{
@@ -322,7 +326,7 @@ marquee{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 20px;
+    padding: 0 20px 0 20px;
 }
 
 .rating {
