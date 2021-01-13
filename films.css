@@ -3,7 +3,8 @@ body{
     margin:auto;
     display: flex;
     flex-direction: column;
-    background-color: #525d67;
+    background-image: url(./Images\ streaming/film.jpg);
+    background-attachment: fixed;
     font-family: "Bodoni MT";
 }
 
@@ -111,13 +112,22 @@ body{
 }
 
 h1{
+    color: red;
     text-align: center;
     font-size: 40px;
+}
+
+h2{
+    color: red;
 }
 
 span{
     font-size: 25px;
     font-weight: bold;
+}
+
+.synop{
+    background-color: rgba(218, 222, 225, 0.8);
 }
 
 .video{
@@ -158,6 +168,7 @@ hr{
 
 .card{
     border: 3px solid  rgba(218, 222, 225, 0.8);
+    background-color: rgba(218, 222, 225, 0.8);
     text-align: center;
     border-radius: 20px;
     transform: scale(1);
