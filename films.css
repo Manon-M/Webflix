@@ -3,7 +3,7 @@ body{
     margin:auto;
     display: flex;
     flex-direction: column;
-    background-image: url(./Images\ streaming/film.jpg);
+    background-image: url(./Images\ streaming/film_2.jpg);
     background-attachment: fixed;
     font-family: "Bodoni MT";
 }
@@ -128,6 +128,7 @@ span{
 
 .synop{
     background-color: rgba(218, 222, 225, 0.8);
+    padding: 15px;
 }
 
 .video{
