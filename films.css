@@ -3,7 +3,7 @@ body{
     margin:auto;
     display: flex;
     flex-direction: column;
-    background-image: url(./Images\ streaming/film_2.jpg);
+    background-image: url(./Images\ streaming/admission.jpg);
     background-attachment: fixed;
     font-family: "Bodoni MT";
 }
@@ -174,6 +174,7 @@ hr{
     border-radius: 20px;
     transform: scale(1);
     transition: .3s ease-in-out;
+    margin: 20px 0 20px 0;
 }
 
 .image_border{
@@ -249,9 +250,14 @@ footer{
     font-weight: bold;
 }
 
-.contact{
+.modalités{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.modalités li{
+    list-style: none;
+    margin-right: 35px;
 }
 
 footer a{

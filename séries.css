@@ -3,7 +3,8 @@ body{
     margin:auto;
     display: flex;
     flex-direction: column;
-    background-color: #525d67;
+    background-image: url(./Images\ streaming/admission.jpg);
+    background-attachment: fixed;
     font-family: "Bodoni MT";
 }
 
@@ -115,9 +116,24 @@ hr{
     width: 35%;
 }
 
+h1{
+    color: red;
+    text-align: center;
+    font-size: 40px;
+}
+
+h2{
+    color: red;
+}
+
 span{
     font-size: 25px;
     font-weight: bold;
+}
+
+.synop{
+    background-color: rgba(218, 222, 225, 0.8);
+    padding: 15px;
 }
 
 .video{
@@ -126,25 +142,34 @@ span{
     margin: 50px 0 50px 0;
 }
 
-.structure{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+.card_film{
+    align-self: center;
 }
 
-.stream{
-    display: inline-block;
-    margin-bottom: 50px;
-}
-
-.vidéos{
+.ensemble{
     display: flex;
     flex-direction: row;
-    border: 3px solid black;
+    justify-content: space-around;
+    margin-top: 60px;
+    width: 1000px;
+}
+
+.carte{
+    display: inline-block;
+    border: 2px solid rgba(218, 222, 225, 0.8);
+    background-color: rgba(218, 222, 225, 0.8);
+}
+
+.photo{
+    display: flex;
+    flex-direction: row;
 }
 
 .texte{
-    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px 0 20px;
 }
 
 .suggestions{
@@ -153,21 +178,23 @@ span{
     justify-content: space-around;
 }
 
-.card{
+.sm_card{
+    display: inline-block;
     border: 3px solid  rgba(218, 222, 225, 0.8);
-    background-color:  rgba(218, 222, 225, 0.8);
+    background-color: rgba(218, 222, 225, 0.8);
     text-align: center;
     border-radius: 20px;
     transform: scale(1);
     transition: .3s ease-in-out;
+    margin: 20px 0 20px 0;
 }
 
-.card:hover{
+.imageborder{
+    border-radius: 20px 20px 0 0;
+}
+
+.sm_card:hover{
     transform: scale(1.1);
-}
-
-.image_border{
-    border-radius: 20px;
 }
 
 #nov{
@@ -235,9 +262,14 @@ footer{
     font-weight: bold;
 }
 
-.contact{
+.modalités{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.modalités li{
+    list-style: none;
+    margin-right: 35px;
 }
 
 footer a{
