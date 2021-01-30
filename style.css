@@ -233,11 +233,6 @@ h2{
     transform: scale(1.1);
 }
 
-marquee{
-    margin-top: 20px;
-    font-size: 25px;
-}
-
 .card_film{
     align-self: center;
 }
@@ -264,10 +259,6 @@ marquee{
 
 .imageborder{
     border-radius: 35px;
-}
-
-.poster{
-    width: 25%;
 }
 
 .photo{
