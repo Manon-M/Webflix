@@ -26,13 +26,12 @@ hr{
     display:flex;
     flex-direction: row;
     align-items: flex-end; 
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 #menu{
     display:flex;
     flex-direction: row;
-    transform: scale(1);
     transition: .2s ease-in-out;
 }
 
@@ -76,7 +75,6 @@ hr{
 {
     color: red;
     background-color: #e0dbdb;
-    transform: scale(1.2);
 }
 
 .navigation li:hover ul 
@@ -99,6 +97,11 @@ hr{
 .navigation li:hover li a:hover 
 {
     background:#bab7b5;
+}
+
+.navigation ul li ul li{
+    animation-duration: 2s;
+    animation-name: fadeInDown;
 }
 
 .recherche{
@@ -135,15 +138,8 @@ hr{
     border: 2px solid rgba(218, 222, 225, 0.8);
     border-radius: 30px;
     box-shadow: 15px -15px 3px #c6cace;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-}
-
-.card:hover{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    animation-duration: 2s;
+    animation-name: zoomIn;
 }
 
 .card p{
@@ -243,11 +239,8 @@ h2{
     border: 2px solid rgba(218, 222, 225, 0.8);
     background-color: rgba(218, 222, 225, 0.8);
     border-radius: 35px;
-    transition: all 0.5s ease;
-}
-
-.carte:hover{
-    transform: rotate(5deg)
+    animation-duration: 2s;
+    animation-name: flipInX ;
 }
 
 .imageborder{
@@ -260,7 +253,7 @@ h2{
 }
 
 .poster{
-    width: 25%;
+    width: 20%;
 }
 
 .texte{
@@ -353,3 +346,52 @@ footer a{
 footer a:hover{
     color: red;
 }
+
+@keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes flipInX {
+    from {
+      transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+  
+    40% {
+      transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      animation-timing-function: ease-in;
+    }
+  
+    60% {
+      transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      opacity: 1;
+    }
+  
+    80% {
+      transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+  
+    to {
+      transform: perspective(400px);
+    }
+  }
