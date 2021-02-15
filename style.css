@@ -121,13 +121,6 @@ hr{
     margin-top: 50px;
 }
 
-marquee{
-    color: red;
-    margin-top: 20px;
-    font-size: 25px;
-}
-
-
 /*structure des cards films et séries*/
 .structure{
     display: flex;
@@ -298,7 +291,6 @@ h2{
 
 .pagination a:hover{
     color: red;
-    border: 2px solid red;
 }
 
 footer{
