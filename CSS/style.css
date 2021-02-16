@@ -1,0 +1,396 @@
+body{
+    width: 95%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../Images\ streaming/camera_3.jpg);
+    background-attachment: fixed;
+    font-family: "Bodoni MT";
+}
+
+hr{
+    width: 95%;
+    color: black;
+}
+
+.entete{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: rgba(218, 222, 225, 0.8);
+}
+
+.navigation{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end; 
+    font-weight: bold;
+}
+
+#menu{
+    display:flex;
+    flex-direction: row;
+}
+
+/*boutons de recherche et navigation header*/
+.navigation ul 
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li
+{
+    font-size: 20px;
+    display: block;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+}
+
+.navigation li ul
+{
+    display: none;
+}
+
+.sous_menu{
+    border: 1px solid rgba(89, 94, 98, 0.2);
+}
+
+.navigation ul li a 
+{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px 5px 15px;
+    margin-left: 1px;
+    white-space: nowrap;
+}
+
+.navigation ul li a:hover 
+{
+    color: red;
+    background-color: #e0dbdb;
+}
+
+.navigation li:hover ul 
+{
+    display: block;
+    position: absolute;
+}
+
+.navigation li:hover li
+{
+    float: none;
+    font-size: 15px;
+}
+
+.navigation li:hover a 
+{
+    background: #FFFF;
+}
+
+.navigation li:hover li a:hover 
+{
+    background:#bab7b5;
+}
+
+.navigation ul li ul li{
+    animation-duration: 2s;
+    animation-name: fadeInDown;
+}
+
+.recherche{
+    margin: 0 3px 8px 0;
+}
+/*jusqu'ici*/
+
+.logo{
+    padding: 15px 0 15px 15px;
+}
+
+/*image logo*/
+.lecteur{
+    width: 25%;
+}
+
+.films{
+    color: #FFFF;
+    font-family: Broadway;
+    margin-top: 50px;
+}
+
+/*structure des cards films et séries*/
+.structure{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card{
+    display: inline-block;
+    margin-top: 50px;
+    background-color:rgba(218, 222, 225, 0.8);
+    border: 2px solid rgba(218, 222, 225, 0.8);
+    border-radius: 30px;
+    box-shadow: 15px -15px 3px #c6cace;
+    animation-duration: 2s;
+    animation-name: zoomIn;
+}
+
+.card p{
+    font-weight: bold;
+}
+
+.imageborder{
+    border-radius: 30px 30px 0 0;
+}
+
+.titre_card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1em;
+}
+
+h2{
+    text-align: center;
+}
+
+.titre_card p{
+    padding-right: 6px;
+}
+
+.rating {
+    direction: rtl;
+ }
+.rating a {
+    color: gray;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color .4s;
+}
+.rating a:hover,
+.rating a:focus,
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+    color: orange;
+    cursor: pointer;
+}
+
+/*CSS Pages Films*/
+.barre_catégorie{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color:  rgba(218, 222, 225, 0.8);
+    margin-top: 25px;
+}
+
+.catégories{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    transform: scale(1);
+    transition: .2s ease-in-out;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.catégories li{
+    margin-right: 35px;
+}
+
+.catégories li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px 5px 15px;
+    margin-left: 1px;
+    white-space: nowrap;
+}
+
+.catégories li a:hover{
+    color: red;
+    background-color: #e0dbdb;
+    transform: scale(1.1);
+}
+
+.card_film{
+    align-self: center;
+}
+
+.ensemble{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 60px;
+    width: 1000px;
+}
+
+.carte{
+    display: inline-block;
+    border: 2px solid rgba(218, 222, 225, 0.8);
+    background-color: rgba(218, 222, 225, 0.8);
+    border-radius: 35px;
+    animation-duration: 2s;
+    animation-name: flipInX ;
+}
+
+.imageborder{
+    border-radius: 35px;
+}
+
+.photo{
+    display: flex;
+    flex-direction: row;
+}
+
+.poster{
+    width: 20%;
+}
+
+.texte{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px 0 20px;
+}
+
+/*navigation des pages*/
+#nov{
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    padding: 35px 0 20px 0;
+    display: inline-block;
+    justify-content: center;
+}
+
+.pagination a {
+    color: rgba(218, 222, 225, 1);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a:hover{
+    color: red;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(218, 222, 225, 0.8);
+}
+
+.cam{
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0 0 20px;
+    width: 20%;
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.utilisation{
+    display: flex;
+    flex-direction: row;
+}
+
+.utilisation p{
+    padding-right: 20px;
+}
+
+.copyright{
+    display: flex;
+}
+
+.conditions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 30px;
+    border-top: 2px solid black;
+    font-weight: bold;
+}
+
+.modalités{
+    display: flex;
+    flex-direction: row;
+}
+
+.modalités li{
+    list-style: none;
+    margin-right: 35px;
+}
+
+footer a{
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: red;
+}
+
+@keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes flipInX {
+    from {
+      transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+  
+    40% {
+      transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      animation-timing-function: ease-in;
+    }
+  
+    60% {
+      transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      opacity: 1;
+    }
+  
+    80% {
+      transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+  
+    to {
+      transform: perspective(400px);
+    }
+  }

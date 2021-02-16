@@ -3,7 +3,7 @@ body{
     margin:auto;
     display: flex;
     flex-direction: column;
-    background-image: url(./Images\ streaming/camera_3.jpg);
+    background-image: url(../Images\ streaming/admission.jpg);
     background-attachment: fixed;
     font-family: "Bodoni MT";
 }
@@ -26,13 +26,12 @@ hr{
     display:flex;
     flex-direction: row;
     align-items: flex-end; 
-    font-weight: bold;
+    font-weight: bold; 
 }
 
 #menu{
     display:flex;
     flex-direction: row;
-    transition: .2s ease-in-out;
 }
 
 /*boutons de recherche et navigation header*/
@@ -110,116 +109,41 @@ hr{
 /*jusqu'ici*/
 
 .logo{
+    display: flex;
+    align-items: baseline;
+    width: 50%;
     padding: 15px 0 15px 15px;
 }
 
 /*image logo*/
 .lecteur{
-    width: 25%;
+    width: 35%;
 }
 
-.films{
-    color: #FFFF;
-    font-family: Broadway;
-    margin-top: 50px;
-}
-
-/*structure des cards films et séries*/
-.structure{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.card{
-    display: inline-block;
-    margin-top: 50px;
-    background-color:rgba(218, 222, 225, 0.8);
-    border: 2px solid rgba(218, 222, 225, 0.8);
-    border-radius: 30px;
-    box-shadow: 15px -15px 3px #c6cace;
-    animation-duration: 2s;
-    animation-name: zoomIn;
-}
-
-.card p{
-    font-weight: bold;
-}
-
-.imageborder{
-    border-radius: 30px 30px 0 0;
-}
-
-.titre_card{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 1em;
+h1{
+    color: red;
+    text-align: center;
+    font-size: 40px;
 }
 
 h2{
-    text-align: center;
+    color: red;
 }
 
-.titre_card p{
-    padding-right: 6px;
-}
-
-.rating {
-    direction: rtl;
- }
-.rating a {
-    color: gray;
-    text-decoration: none;
-    font-size: 1.5em;
-    transition: color .4s;
-}
-.rating a:hover,
-.rating a:focus,
-.rating a:hover ~ a,
-.rating a:focus ~ a {
-    color: orange;
-    cursor: pointer;
-}
-
-/*CSS Pages Films*/
-.barre_catégorie{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color:  rgba(218, 222, 225, 0.8);
-    margin-top: 25px;
-}
-
-.catégories{
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    transform: scale(1);
-    transition: .2s ease-in-out;
-    font-size: 20px;
+span{
+    font-size: 25px;
     font-weight: bold;
 }
 
-.catégories li{
-    margin-right: 35px;
+.synop{
+    background-color: rgba(218, 222, 225, 0.8);
+    padding: 15px;
 }
 
-.catégories li a{
-    display: block;
-    text-decoration: none;
-    color: black;
-    padding: 5px 15px 5px 15px;
-    margin-left: 1px;
-    white-space: nowrap;
-}
-
-.catégories li a:hover{
-    color: red;
-    background-color: #e0dbdb;
-    transform: scale(1.1);
+.video{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 50px 0;
 }
 
 .card_film{
@@ -238,22 +162,11 @@ h2{
     display: inline-block;
     border: 2px solid rgba(218, 222, 225, 0.8);
     background-color: rgba(218, 222, 225, 0.8);
-    border-radius: 35px;
-    animation-duration: 2s;
-    animation-name: flipInX ;
-}
-
-.imageborder{
-    border-radius: 35px;
 }
 
 .photo{
     display: flex;
     flex-direction: row;
-}
-
-.poster{
-    width: 20%;
 }
 
 .texte{
@@ -263,7 +176,30 @@ h2{
     padding: 0 20px 0 20px;
 }
 
-/*navigation des pages*/
+.suggestions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sm_card{
+    display: inline-block;
+    border: 3px solid  rgba(218, 222, 225, 0.8);
+    background-color: rgba(218, 222, 225, 0.8);
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px 0 20px 0;
+}
+
+.imageborder{
+    border-radius: 20px 20px 0 0;
+}
+
+.sm_card:hover{
+    animation-duration: 2s;
+    animation-name: bounceIn;
+}
+
 #nov{
     display: flex;
     justify-content: center;
@@ -276,7 +212,7 @@ h2{
 }
 
 .pagination a {
-    color: rgba(218, 222, 225, 1);
+    color: #FFFF;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
@@ -344,54 +280,55 @@ footer a{
 }
 
 footer a:hover{
-    color: red;
+    color:red;
 }
 
-@keyframes zoomIn {
-    from {
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
       opacity: 0;
       transform: scale3d(0.3, 0.3, 0.3);
     }
   
-    50% {
+    20% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    40% {
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+  
+    60% {
       opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
     }
   }
 
   @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes flipInX {
     from {
-      transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-      animation-timing-function: ease-in;
       opacity: 0;
-    }
-  
-    40% {
-      transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-      animation-timing-function: ease-in;
-    }
-  
-    60% {
-      transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-      opacity: 1;
-    }
-  
-    80% {
-      transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+      transform: translate3d(0, -100%, 0);
     }
   
     to {
-      transform: perspective(400px);
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
     }
   }
